@@ -11,10 +11,8 @@ pipeline {
         stage('debug') {
             steps {
                 echo "Hello"
-                
-                    def math = new l.net.samittutorial.Math(this)
-                    println math.add(2,3)
-                }
+                def math = new l.net.samittutorial.Math(this)
+                println math.add(2,3)
             }
         }
     }
