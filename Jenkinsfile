@@ -8,8 +8,8 @@ pipeline {
            """
            script {
              println "Hello World!"
-             load "var.groovy"
-             MapA.each { v ->
+             def x = load "var.groovy"
+             x.MapA.each { v ->
                echo "${v}"
              }
            }
