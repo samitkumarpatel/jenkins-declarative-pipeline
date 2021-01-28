@@ -1,8 +1,10 @@
-def l = library identifier: 'jenkins-shared-libraries@question/stackoverflow', 
-    retriever: modernSCM([
-        $class: 'GitSCMSource',
-        remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
-    ])
+def l = library(
+        identifier: 'jenkins-shared-libraries@question/stackoverflow', 
+            retriever: modernSCM([
+                $class: 'GitSCMSource',
+                remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
+            ])
+    )
 pipeline {
     agent any
     stages {
