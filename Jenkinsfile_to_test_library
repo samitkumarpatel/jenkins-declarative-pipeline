@@ -8,17 +8,12 @@ pipeline {
     stages {
         stage('debug') {
             steps {
-                echo "Hello"
-                sh "ls -al"
                 script {
                     println d
                     println d.Math.info()
 
                     //add
                     println d.Math.add(5,5) 
-
-                    // writeAndDisplayContent
-                    d.Math.writeAndDisplayContent(1,2)
                 }
                 
             }
