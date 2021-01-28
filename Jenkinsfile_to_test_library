@@ -13,7 +13,7 @@ pipeline {
                 echo "Hello"
                 
                 script {
-                    def math = new Math(this)
+                    def math = new net.samittutorial.Math(this)
                     println math.add(2,3)
                 }
             }
