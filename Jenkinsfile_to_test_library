@@ -12,6 +12,7 @@ pipeline {
                 sh "ls -al"
                 script {
                     println d
+                    println d(this)
                     println d.info()
                 }
                 
