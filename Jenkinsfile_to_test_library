@@ -13,11 +13,11 @@ pipeline {
                 echo "Hello"
                 
                 script {
-                    println library identifier: 'jenkins-shared-libraries@question/stackoverflow',
-    retriever: modernSCM([
-        $class: 'GitSCMSource',
-        remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
-    ]).net.samittutorial.Math.add(1,2)
+                    library identifier: 'jenkins-shared-libraries@question/stackoverflow',
+                       retriever: modernSCM([
+                           $class: 'GitSCMSource',
+                           remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
+                       ]).net.samittutorial.Math.add(1,2)
 
                     //def math = new net.samittutorial.Math(this)
                     //println math.add(2,3)
