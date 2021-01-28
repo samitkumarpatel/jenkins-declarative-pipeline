@@ -7,11 +7,9 @@ pipeline {
             ls -al
            """
            script {
-             println "Hello World!"
              def x = load "var.groovy"
-             x.MapA.each { v ->
-               echo "${v}"
-             }
+             print x.helloWorld()
+             
            }
          }
      }
