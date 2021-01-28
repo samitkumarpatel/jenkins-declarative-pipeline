@@ -4,15 +4,14 @@ library(
                 $class: 'GitSCMSource',
                 remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
             ])
-    ) _
+    )
 pipeline {
     agent any
     stages {
         stage('debug') {
             steps {
                 echo "Hello"
-                net.samittutorial.Math.info()
-                println math.add(2,3)
+                library('jenkins-shared-libraries').net.samittutorial.Math.info()
             }
         }
     }
