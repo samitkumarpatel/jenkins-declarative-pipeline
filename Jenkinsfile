@@ -7,7 +7,7 @@ pipeline {
             ls -al
            """
            script {
-             def x = load "var.groovy"
+             def x = load "${env.WORKSPACE}/var.groovy"
              print x.helloWorld()
              
            }

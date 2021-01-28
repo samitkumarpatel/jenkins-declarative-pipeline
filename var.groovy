@@ -16,3 +16,4 @@ def mapA() {
 def helloWorld(){
     println "Hello World!"
 }
+return this;
