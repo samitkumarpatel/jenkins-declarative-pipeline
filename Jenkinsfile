@@ -8,7 +8,10 @@ pipeline {
            """
            script {
              def x = load "${env.WORKSPACE}/var.groovy"
-             print x.helloWorld()
+             x.helloWorld()
+             x.mapA().each { k, v ->
+                echo "${k} : ${v}"
+             }
              
            }
          }
