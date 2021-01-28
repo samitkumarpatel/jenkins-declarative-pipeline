@@ -9,10 +9,14 @@ pipeline {
            script {
              def x = load "${env.WORKSPACE}/var.groovy"
              x.helloWorld()
+             
              x.mapA().each { k, v ->
-                echo "${k} : ${v}"
+                stage(k) {
+                  v.each { k1,v1 ->
+                    echo "for ${k} value of ${k1} is ${v1}"
+                  }
+                }   
              }
-             println x.m
            }
          }
      }
