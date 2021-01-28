@@ -10,7 +10,7 @@ def mapB = [
         Version: '2.0.0.1',
     ]
 ]
-
+def m = 10
 def mapA() {
     return [
         ItemA: [

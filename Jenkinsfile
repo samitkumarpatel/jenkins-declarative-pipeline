@@ -12,9 +12,7 @@ pipeline {
              x.mapA().each { k, v ->
                 echo "${k} : ${v}"
              }
-             x.mapB.each { k, v ->
-                echo "${k} : ${v}"
-             }
+             println x.m
            }
          }
      }
