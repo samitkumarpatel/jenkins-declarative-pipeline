@@ -1,5 +1,3 @@
-def x = load "var.groovy"
-
 pipeline {
   agent any 
   stages {
@@ -10,6 +8,7 @@ pipeline {
            """
            script {
              println "Hello World!"
+             def x = load "var.groovy"
              println x
            }
          }
