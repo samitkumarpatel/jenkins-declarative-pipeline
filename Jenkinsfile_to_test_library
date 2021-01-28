@@ -1,7 +1,7 @@
 def d = library identifier: 'jenkins-shared-libraries@question/stackoverflow', retriever: modernSCM([
         $class: 'GitSCMSource',
         remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
-]) net.samittutorial.Math
+]) net.samittutorial
 
 pipeline {
     agent any
@@ -12,8 +12,7 @@ pipeline {
                 sh "ls -al"
                 script {
                     println d
-                    println d(this)
-                    println d.info()
+                    println d.Math.info()
                 }
                 
             }
