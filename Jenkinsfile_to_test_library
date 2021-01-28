@@ -1,17 +1,15 @@
-library(
-        identifier: 'jenkins-shared-libraries@question/stackoverflow', 
-            retriever: modernSCM([
-                $class: 'GitSCMSource',
-                remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
-            ])
-    )
+library identifier: 'jenkins-shared-libraries@question/stackoverflow', retriever: modernSCM([
+        $class: 'GitSCMSource',
+        remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
+]) net.samittutorial.Math
+
 pipeline {
     agent any
     stages {
         stage('debug') {
             steps {
                 echo "Hello"
-                library('jenkins-shared-libraries').net.samittutorial.Math.info()
+                sh "ls -al"
             }
         }
     }
