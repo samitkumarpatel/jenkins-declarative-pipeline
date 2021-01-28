@@ -3,9 +3,7 @@ library identifier: 'jenkins-shared-libraries@question/stackoverflow',
     retriever: modernSCM([
         $class: 'GitSCMSource',
         remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
-    ])
-
-import net.samittutorial.Math    
+    ]).net.samittutorial.Math    
 
 pipeline {
     agent any
