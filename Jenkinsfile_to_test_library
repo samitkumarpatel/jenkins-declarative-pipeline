@@ -1,17 +1,17 @@
-def l = library(
+library(
         identifier: 'jenkins-shared-libraries@question/stackoverflow', 
             retriever: modernSCM([
                 $class: 'GitSCMSource',
                 remote: 'https://github.com/samitkumarpatel/jenkins-shared-libs.git'
             ])
-    )
+    ) _
 pipeline {
     agent any
     stages {
         stage('debug') {
             steps {
                 echo "Hello"
-                l.net.samittutorial.Math.info()
+                net.samittutorial.Math.info()
                 println math.add(2,3)
             }
         }
