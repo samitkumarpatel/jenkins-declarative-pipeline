@@ -9,7 +9,9 @@ pipeline {
            script {
              println "Hello World!"
              def x = load "var.groovy"
-             println x
+             x.each { v ->
+               echo "${v}"
+             }
            }
          }
      }
