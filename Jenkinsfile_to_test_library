@@ -13,6 +13,7 @@ pipeline {
                 script {
                     println d
                     println d.Math.info()
+                    println d.Math(this).add(1,2)
                 }
                 
             }
