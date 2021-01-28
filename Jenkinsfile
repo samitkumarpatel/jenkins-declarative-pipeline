@@ -1,11 +1,14 @@
 pipeline {
   agent any 
   stages {
-     stage("echo") {
+     stage("iterate") {
          steps {
-             //error("Build failed because of this and that..")
-             echo "Hello World"
-             echo "JENKINS_HOME : ${JENKINS_HOME}"
+           sh """
+            ls -al
+           """
+           script {
+             println "Hello World!"
+           }
          }
      }
   }
