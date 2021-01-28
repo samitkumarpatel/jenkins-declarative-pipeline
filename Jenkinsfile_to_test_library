@@ -13,7 +13,10 @@ pipeline {
                 script {
                     println d
                     println d.Math.info()
-                    println d.Math(this).add(1,2)
+                    //write & read operation
+                    d.Math.pipeline = this
+                    //add
+                    println d.Math.add(5,5) 
                 }
                 
             }
